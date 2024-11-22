@@ -1,39 +1,39 @@
 .bbn-toggle {
-  @apply relative inline-block transition-colors duration-200;
+  @apply b-relative b-inline-block b-transition-colors b-duration-200;
 
   &:not(&-disabled) {
-    @apply text-primary-light hover:text-primary-main;
+    @apply b-text-primary-light hover:b-text-primary-main;
   }
 
   &-disabled {
-    @apply text-primary/12;
+    @apply b-text-primary/12;
   }
 }
 
 .bbn-toggle-input {
-  @apply absolute inset-0 z-[1] opacity-0;
+  @apply b-absolute b-inset-0 b-z-[1] b-opacity-0;
 
   &:not(:disabled) {
-    @apply cursor-pointer;
+    @apply b-cursor-pointer;
   }
 
   &:disabled {
-    @apply cursor-default;
+    @apply b-cursor-default;
   }
 }
 
 .bbn-toggle-label {
-  @apply inline-flex h-5 items-center gap-4;
+  @apply b-inline-flex b-h-5 b-items-center b-gap-4;
 }
 
 .bbn-toggle-left {
   &.bbn-toggle-label {
-    @apply flex-row;
+    @apply b-flex-row;
   }
 }
 
 .bbn-toggle-right {
   &.bbn-toggle-label {
-    @apply flex-row-reverse;
+    @apply b-flex-row-reverse;
   }
 }

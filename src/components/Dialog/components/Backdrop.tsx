@@ -10,8 +10,8 @@ export const Backdrop = ({ open = false, ...props }: BackdropProps) => (
   <div
     {...props}
     className={twJoin(
-      "fixed inset-0 z-40 flex items-center justify-center bg-primary/50 transition-opacity duration-500",
-      open ? "animate-backdrop-in" : "animate-backdrop-out",
+      "b-fixed b-inset-0 b-z-40 b-flex b-items-center b-justify-center b-bg-primary/50 b-transition-opacity b-duration-500",
+      open ? "b-animate-backdrop-in" : "b-animate-backdrop-out",
       props.className,
     )}
   />

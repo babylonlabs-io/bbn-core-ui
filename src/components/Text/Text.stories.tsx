@@ -16,23 +16,23 @@ export const Default: Story = {
     args.variant ? (
       <Text {...args}>Text--{args.variant}</Text>
     ) : (
-      <div className="text-primary">
-        <Text {...args} variant="body1" className="my-4">
+      <div className="b-text-primary">
+        <Text {...args} variant="body1" className="b-my-4">
           Text--Body1
         </Text>
-        <Text {...args} variant="body2" className="my-4">
+        <Text {...args} variant="body2" className="b-my-4">
           Text--Body2
         </Text>
-        <Text {...args} variant="subtitle1" className="my-4">
+        <Text {...args} variant="subtitle1" className="b-my-4">
           Text--subtitle1
         </Text>
-        <Text {...args} variant="subtitle2" className="my-4">
+        <Text {...args} variant="subtitle2" className="b-my-4">
           Text--subtitle2
         </Text>
-        <Text {...args} variant="overline" className="my-4">
+        <Text {...args} variant="overline" className="b-my-4">
           Text--overline
         </Text>
-        <Text {...args} variant="caption" className="my-4">
+        <Text {...args} variant="caption" className="b-my-4">
           Text--caption
         </Text>
       </div>

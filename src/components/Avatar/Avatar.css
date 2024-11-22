@@ -1,31 +1,31 @@
 .bbn-avatar {
-  @apply inline-flex items-center justify-center overflow-hidden;
+  @apply b-inline-flex b-items-center b-justify-center b-overflow-hidden;
 
   &-img {
-    @apply size-full object-cover object-center;
+    @apply b-size-full b-object-cover b-object-center;
   }
 
   &-tiny {
-    @apply size-[1.125rem];
+    @apply b-size-[1.125rem];
   }
 
   &-small {
-    @apply size-6;
+    @apply b-size-6;
   }
 
   &-medium {
-    @apply size-8;
+    @apply b-size-8;
   }
 
   &-large {
-    @apply size-10;
+    @apply b-size-10;
   }
 
   &-circular {
-    @apply rounded-full;
+    @apply b-rounded-full;
   }
 
   &-rounded {
-    @apply rounded;
+    @apply b-rounded;
   }
 }

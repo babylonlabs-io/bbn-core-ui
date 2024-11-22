@@ -1,0 +1,23 @@
+.bbn-dialog {
+  @apply b-rounded b-border b-border-primary-light/20 b-bg-[#ffffff] b-p-6;
+
+  &-wrapper {
+    @apply b-fixed b-left-1/2 b-top-1/2 b-z-50 b-max-w-full -b-translate-x-1/2 -b-translate-y-1/2;
+  }
+
+  &-body {
+    @apply custom-scrollbar b-min-h-0 b-flex-1 b-overflow-y-auto;
+  }
+
+  &-header {
+    @apply b-flex b-items-center b-justify-between b-gap-2;
+  }
+
+  &-footer {
+    @apply b-shrink-0;
+  }
+
+  &-mobile {
+    @apply b-fixed b-inset-x-0 b-bottom-0 b-z-50 b-flex b-flex-col b-rounded-t-3xl b-bg-[#ffffff] b-px-4 b-pb-4 b-pt-6;
+  }
+}

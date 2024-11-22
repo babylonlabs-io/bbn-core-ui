@@ -1,39 +1,39 @@
 .bbn-btn {
-  @apply rounded tracking-0.4 transition-colors duration-200;
+  @apply b-rounded b-tracking-0.4 b-transition-colors b-duration-200;
 
   &-fluid {
-    @apply w-full;
+    @apply b-w-full;
   }
 
   &-contained {
     &.bbn-btn-primary {
-      @apply bg-primary-light text-secondary-contrast hover:bg-primary-main disabled:bg-primary/12;
+      @apply b-bg-primary-light b-text-secondary-contrast hover:b-bg-primary-main disabled:b-bg-primary/12;
     }
 
     &.bbn-btn-secondary {
-      @apply bg-secondary-main text-secondary-contrast hover:bg-secondary-dark disabled:bg-primary/12;
+      @apply b-bg-secondary-main b-text-secondary-contrast hover:b-bg-secondary-dark disabled:b-bg-primary/12;
     }
   }
 
   &-outlined {
     &.bbn-btn-primary {
-      @apply border border-primary-light text-primary-main hover:border-primary hover:bg-primary/10;
+      @apply b-border b-border-primary-light b-text-primary-main hover:b-border-primary hover:b-bg-primary/10;
     }
 
     &.bbn-btn-secondary {
-      @apply border border-secondary-main text-secondary-main hover:border-secondary-light hover:bg-secondary-light/10;
+      @apply b-border b-border-secondary-main b-text-secondary-main hover:b-border-secondary-light hover:b-bg-secondary-light/10;
     }
   }
 
   &-large {
-    @apply h-10 px-6 text-base tracking-0.5;
+    @apply b-h-10 b-px-6 b-text-base b-tracking-0.5;
   }
 
   &-medium {
-    @apply h-9 px-4 text-sm tracking-0.5;
+    @apply b-h-9 b-px-4 b-text-sm b-tracking-0.5;
   }
 
   &-small {
-    @apply h-8 px-2.5 text-xs tracking-0.5;
+    @apply b-h-8 b-px-2.5 b-text-xs b-tracking-0.5;
   }
 }

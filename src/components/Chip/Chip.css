@@ -1,3 +1,3 @@
 .bbn-chip {
-  @apply inline-flex items-center justify-center rounded-full bg-primary-contrast px-2.5 py-1 text-[0.5rem] leading-4 tracking-0.4 text-primary-light;
+  @apply b-inline-flex b-items-center b-justify-center b-rounded-full b-bg-primary-contrast b-px-2.5 b-py-1 b-text-[0.5rem] b-leading-4 b-tracking-0.4 b-text-primary-light;
 }

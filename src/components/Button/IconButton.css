@@ -1,3 +1,3 @@
 .bbn-btn-icon {
-  @apply inline-flex size-10 items-center justify-center rounded border border-current text-primary-light;
+  @apply b-inline-flex b-size-10 b-items-center b-justify-center b-rounded b-border b-border-current b-text-primary-light;
 }

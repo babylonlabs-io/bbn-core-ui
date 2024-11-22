@@ -40,7 +40,7 @@ export const Default: Story = {
           }}
         >
           <DialogHeader
-            className="text-primary-main"
+            className="b-text-primary-main"
             onClose={() => {
               setVisibility(false);
             }}
@@ -48,8 +48,8 @@ export const Default: Story = {
             Bitcoin Inscriptions
           </DialogHeader>
 
-          <DialogBody className="pb-8 pt-4 text-primary-dark">
-            <Text className="mb-6" variant="body1">
+          <DialogBody className="b-pb-8 b-pt-4 b-text-primary-dark">
+            <Text className="b-mb-6" variant="body1">
               This staking interface attempts to detect bitcoin ordinals, NFTs, Ruins, and other inscriptions
               (“Inscriptions”) within the Unspent Transaction Outputs (“UTXOs”) in your wallet. If you stake bitcoin
               with Inscriptions, those UTXOs may be spent on staking, unbonding, or withdrawal fees, which will cause
@@ -58,7 +58,7 @@ export const Default: Story = {
 
             <Text variant="body1">Chose one: (you can change this later)</Text>
 
-            <Checkbox checked labelClassName="mt-6" label="Don't show again" />
+            <Checkbox checked labelClassName="b-mt-6" label="Don't show again" />
           </DialogBody>
 
           <DialogFooter>

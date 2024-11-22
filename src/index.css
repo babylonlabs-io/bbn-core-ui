@@ -20,11 +20,11 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-primary;
+    @apply b-bg-primary;
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    @apply bg-primary;
+    @apply b-bg-primary;
   }
 }
 
@@ -128,7 +128,7 @@
 }
 
 body {
-  @apply font-sans text-base font-normal leading-normal tracking-normal;
+  @apply b-font-sans b-text-base b-font-normal b-leading-normal b-tracking-normal;
 
   font-feature-settings:
     "liga" off,
