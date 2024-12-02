@@ -6,7 +6,11 @@ interface Options<V> {
   onStateChange?: (state: V) => void;
 }
 
-export function useControlledState<V>({ value: controlledState, defaultValue: defaultState, onStateChange }: Options<V> = {}): [V | undefined, (state: V) => void] {
+export function useControlledState<V>({
+  value: controlledState,
+  defaultValue: defaultState,
+  onStateChange,
+}: Options<V> = {}): [V | undefined, (state: V) => void] {
   const [uncontrolledState, setUncontrolledState] = useState(defaultState);
   const { current: isControlled } = useRef(controlledState != null);
 
@@ -20,7 +24,7 @@ export function useControlledState<V>({ value: controlledState, defaultValue: de
 
       onStateChange?.(newValue);
     },
-    [isControlled, onStateChange, setUncontrolledState]
+    [isControlled, onStateChange, setUncontrolledState],
   );
 
   return [state, handleStateChange];

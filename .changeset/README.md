@@ -8,17 +8,19 @@ We have a quick list of common questions to get you started engaging with this p
 [our documentation](https://github.com/changesets/changesets/blob/main/docs/common-questions.md)
 
 # Usage
+
 1. `npx changeset` to create a changeset
 
-2. Select change type: 
+2. Select change type:
+
 ```
-Major: 
+Major:
 - Describes when to use a major change, focusing on breaking changes.
 
-Minor: 
+Minor:
 - Describes when to use a minor change, focusing on new features that are backward compatible.
 
-Patch: 
+Patch:
 - Describes when to use a patch change, focusing on bug fixes and small improvements.
 ```
 
@@ -31,5 +33,6 @@ Patch:
 9. After reviewing, merge the `Version Packages` PR on Github, the package version is then updated and published to npm.
 
 Notes:
+
 - The `Version Packages` is automatically updated with the latest changeset(s).
 - The `Version Packages` will only update the package versions and publish to npm, not the actual code.
