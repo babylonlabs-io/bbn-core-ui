@@ -29,7 +29,7 @@
     "paths": {
       "@/*": ["*", "./*"]
     },
-    "outDir": "dist",
+    "outDir": "dist"
   },
   "include": ["src"],
   "keywords": ["react", "ui-components", "babylonlabs", "bitcoin", "bitcoin-ui"]

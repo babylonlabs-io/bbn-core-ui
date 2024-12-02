@@ -37,7 +37,7 @@ npm run storybook
 Provide examples of how to use the library in a project. Include code snippets and explanations.
 
 ```javascript
-import { ComponentName } from '@babylonlabs-io/bbn-core-ui';
+import { ComponentName } from "@babylonlabs-io/bbn-core-ui";
 
 function App() {
   return <ComponentName prop="value" />;
