@@ -5,7 +5,7 @@ import { MobileDialog, DialogFooter, DialogBody, DialogHeader } from "./index";
 
 import { ScrollLocker } from "@/context/Dialog.context";
 import { Button } from "@/components/Button";
-import { Checkbox } from "@/components/Input";
+import { Checkbox } from "@/components/Form";
 import { Text } from "@/components/Text";
 
 const meta: Meta<typeof MobileDialog> = {
