@@ -1,0 +1,55 @@
+.bbn-input {
+  @apply relative flex flex-col;
+
+  &-wrapper {
+    @apply flex items-center rounded border border-primary-light/20 bg-secondary-contrast px-4 py-2 text-primary-light transition-colors;
+
+    &:focus-within {
+      @apply border-primary-light;
+    }
+
+    &.bbn-input-error {
+      @apply border-error-main;
+    }
+
+    &.bbn-input-warning {
+      @apply border-warning-main;
+    }
+
+    &.bbn-input-success {
+      @apply border-success-main;
+    }
+
+    &.bbn-input-disabled {
+      @apply opacity-50 pointer-events-none;
+    }
+  }
+
+  &-field {
+    @apply w-full bg-transparent text-sm outline-none placeholder:text-primary-light/50;
+  }
+
+  &-suffix {
+    @apply ml-2 flex items-center text-primary-light/50;
+  }
+
+  &-prefix {
+    @apply mr-2 flex items-center text-primary-light/50;
+  }
+
+  &-state-text {
+    @apply mt-1 text-sm;
+  }
+
+  &-state-text-error {
+    @apply text-error-main;
+  }
+
+  &-state-text-warning {
+    @apply text-warning-main;
+  }
+
+  &-state-text-success {
+    @apply text-success-main;
+  }
+} 

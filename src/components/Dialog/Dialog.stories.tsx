@@ -5,7 +5,7 @@ import { Dialog, DialogFooter, DialogBody, DialogHeader } from "./index";
 
 import { ScrollLocker } from "@/context/Dialog.context";
 import { Button } from "@/components/Button";
-import { Checkbox } from "@/components/Inputs";
+import { Checkbox } from "@/components/Form";
 import { Text } from "@/components/Text";
 import { Heading } from "@/index";
 
