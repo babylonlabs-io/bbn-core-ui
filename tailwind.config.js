@@ -7,6 +7,7 @@ export default {
   theme: {
     colors: {
       current: "currentColor",
+      transparent: "transparent",
       primary: {
         DEFAULT: "#000000DE",
         main: "#042F40",

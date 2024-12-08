@@ -85,5 +85,9 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "react-popper": "^2.3.0"
   }
 }
