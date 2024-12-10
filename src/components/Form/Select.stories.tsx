@@ -85,3 +85,16 @@ export const CustomSelectedDisplay: Story = {
     renderSelectedOption: (option) => `Showing ${option.value}`,
   },
 };
+
+export const WithError: Story = {
+  args: {
+    options: [
+      { value: "active", label: "Active" },
+      { value: "inactive", label: "Inactive" },
+      { value: "pending", label: "Pending" },
+    ],
+    placeholder: "Select status",
+    state: "error",
+    stateText: "This field is required",
+  },
+};

@@ -33,4 +33,32 @@
   &-disabled {
     @apply pointer-events-none cursor-not-allowed opacity-50;
   }
+
+  &-error {
+    @apply border-error-main;
+  }
+
+  &-warning {
+    @apply border-warning-main;
+  }
+
+  &-success {
+    @apply border-success-main;
+  }
+
+  &-state-text {
+    @apply mt-1 text-sm;
+  }
+
+  &-state-text-error {
+    @apply text-error-main;
+  }
+
+  &-state-text-warning {
+    @apply text-warning-main;
+  }
+
+  &-state-text-success {
+    @apply text-success-main;
+  }
 }

@@ -36,6 +36,9 @@ export interface SelectProps {
   className?: string;
   optionClassName?: string;
   popoverClassName?: string;
+  wrapperClassName?: string;
+  state?: "default" | "error" | "warning";
+  stateText?: string;
   onSelect?: (value: Value) => void;
   onOpen?: () => void;
   onClose?: () => void;
@@ -51,6 +54,7 @@ export const Select = forwardRef<HTMLDivElement, SelectProps>(
     {
       disabled,
       className,
+      wrapperClassName,
       value,
       defaultValue,
       placeholder = "Select option",
@@ -63,6 +67,8 @@ export const Select = forwardRef<HTMLDivElement, SelectProps>(
       onSelect,
       onClose,
       renderSelectedOption = defaultOptionRenderer,
+      state = "default",
+      stateText,
       ...props
     },
     ref,
@@ -107,10 +113,10 @@ export const Select = forwardRef<HTMLDivElement, SelectProps>(
     }, [isOpen, disabled, setIsOpen]);
 
     return (
-      <>
+      <div className={twJoin("bbn-select-container", wrapperClassName)}>
         <div
           ref={anchorEl}
-          className={twJoin("bbn-select", disabled && "bbn-select-disabled", className)}
+          className={twJoin("bbn-select", disabled && "bbn-select-disabled", `bbn-select-${state}`, className)}
           onClick={handleClick}
           tabIndex={disabled ? -1 : 0}
           {...props}
@@ -142,7 +148,10 @@ export const Select = forwardRef<HTMLDivElement, SelectProps>(
             </div>
           ))}
         </Popover>
-      </>
+        {stateText && (
+          <span className={twJoin("bbn-select-state-text", `bbn-select-state-text-${state}`)}>{stateText}</span>
+        )}
+      </div>
     );
   },
 );
