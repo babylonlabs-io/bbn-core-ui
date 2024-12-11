@@ -1,5 +1,11 @@
 # @babylonlabs-io/bbn-core-ui
 
+## 0.5.0
+
+### Minor Changes
+
+- a8049c4: add form control component
+
 ## 0.4.1
 
 ### Patch Changes
