@@ -2,8 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react";
 import * as yup from "yup";
 
 import { Form } from "./Form";
-import { useField } from "./hooks";
-import { Input } from "@/components/Form";
+
+import { useField } from "@/widgets/form/hooks";
+import { Input, FormControl } from "@/components/Form";
 
 const meta: Meta<typeof Form> = {
   component: Form,
@@ -17,7 +18,11 @@ type Story = StoryObj<typeof meta>;
 const Field = () => {
   const { error, invalid, ...inputProps } = useField({ name: "test", autoFocus: true, defaultValue: "test" });
 
-  return <Input {...inputProps} state={invalid ? "error" : "default"} stateText={error} />;
+  return (
+    <FormControl label="Text field" state={invalid ? "error" : "default"} hint={error}>
+      <Input {...inputProps} state={invalid ? "error" : "default"} />
+    </FormControl>
+  );
 };
 
 const schema = yup

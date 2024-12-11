@@ -1,0 +1,23 @@
+.bbn-form-control {
+  @apply flex flex-col;
+
+  &-title {
+    @apply mb-2 flex items-center text-sm text-primary-light;
+  }
+
+  &-hint {
+    @apply mt-1 text-sm;
+
+    &.bbn-form-control-hint-error {
+      @apply text-error-main;
+    }
+
+    &.bbn-form-control-hint-warning {
+      @apply text-warning-main;
+    }
+
+    &.bbn-form-control-hint-success {
+      @apply text-success-main;
+    }
+  }
+}

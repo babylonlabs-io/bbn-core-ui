@@ -1,28 +1,24 @@
 .bbn-input {
-  @apply relative flex flex-col;
+  @apply flex items-center rounded border border-primary-light/20 bg-secondary-contrast px-4 py-2 text-primary-light transition-colors;
 
-  &-wrapper {
-    @apply flex items-center rounded border border-primary-light/20 bg-secondary-contrast px-4 py-2 text-primary-light transition-colors;
+  &:focus-within {
+    @apply border-primary-light;
+  }
 
-    &:focus-within {
-      @apply border-primary-light;
-    }
+  &.bbn-input-error {
+    @apply border-error-main;
+  }
 
-    &.bbn-input-error {
-      @apply border-error-main;
-    }
+  &.bbn-input-warning {
+    @apply border-warning-main;
+  }
 
-    &.bbn-input-warning {
-      @apply border-warning-main;
-    }
+  &.bbn-input-success {
+    @apply border-success-main;
+  }
 
-    &.bbn-input-success {
-      @apply border-success-main;
-    }
-
-    &.bbn-input-disabled {
-      @apply opacity-50 pointer-events-none;
-    }
+  &.bbn-input-disabled {
+    @apply pointer-events-none opacity-50;
   }
 
   &-field {
@@ -36,4 +32,4 @@
   &-prefix {
     @apply mr-2 flex items-center text-primary-light/50;
   }
-} 
+}

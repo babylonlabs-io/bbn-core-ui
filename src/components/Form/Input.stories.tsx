@@ -28,14 +28,6 @@ export const Disabled: Story = {
   },
 };
 
-export const WithError: Story = {
-  args: {
-    placeholder: "Input with error",
-    state: "error",
-    hint: "This field is required",
-  },
-};
-
 export const WithSuffix: Story = {
   args: {
     placeholder: "Search...",
@@ -63,7 +55,7 @@ export const LoadingWithInteraction: Story = {
       <Input
         placeholder="Click search to see loading"
         suffix={
-          <button onClick={handleSearch} disabled={isLoading} className="h-5 w-5">
+          <button onClick={handleSearch} disabled={isLoading} className="size-5">
             {isLoading ? <Loader size={20} /> : <RiSearchLine size={20} />}
           </button>
         }
