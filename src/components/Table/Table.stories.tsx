@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 
 import { ColumnProps, Table } from "./";
 import { Avatar } from "../Avatar";
+import { Select } from "../Form";
 
 const meta: Meta<typeof Table> = {
   component: Table,
@@ -123,8 +124,62 @@ export const Default: Story = {
             columns={columns}
             onRowSelect={handleRowSelect}
             isRowSelectable={isRowSelectable}
+            defaultSelectedRow="1"
           />
         </div>
+        {selectedProvider && (
+          <div className="rounded bg-primary-contrast p-4">
+            Selected Provider: {selectedProvider.name} (Commission: {selectedProvider.commission}%)
+          </div>
+        )}
+      </div>
+    );
+  },
+};
+
+export const ControlledSelection: Story = {
+  render: () => {
+    const [selectedId, setSelectedId] = useState<string | number | null>("2");
+    const [selectedProvider, setSelectedProvider] = useState<FinalityProvider | null>(null);
+
+    const handleRowSelect = useCallback((row: FinalityProvider | null) => {
+      setSelectedId(row?.id ?? null);
+      setSelectedProvider(row);
+    }, []);
+
+    const selectOptions = [
+      { value: "", label: "None" },
+      ...data.map((provider) => ({
+        value: provider.id,
+        label: provider.name,
+      })),
+    ];
+
+    const handleSelect = useCallback((value: string | number) => {
+      const selectedRow = value ? (data.find((row) => row.id === value) ?? null) : null;
+      setSelectedId(value);
+      setSelectedProvider(selectedRow);
+    }, []);
+
+    return (
+      <div className="space-y-4">
+        <Select
+          value={selectedId ?? ""}
+          options={selectOptions}
+          onSelect={(value) => handleSelect(value as string)}
+          placeholder="Select a provider"
+        />
+
+        <div className="h-[150px]">
+          <Table
+            data={data}
+            columns={columns}
+            selectedRow={selectedId}
+            onSelectedRowChange={setSelectedId}
+            onRowSelect={handleRowSelect}
+          />
+        </div>
+
         {selectedProvider && (
           <div className="rounded bg-primary-contrast p-4">
             Selected Provider: {selectedProvider.name} (Commission: {selectedProvider.commission}%)
