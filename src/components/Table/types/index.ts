@@ -7,7 +7,9 @@ export type ColumnProps<T = unknown> = {
   sorter?: (a: T, b: T) => number;
 };
 
-export interface TableProps<T extends { id: string | number }> {
+export type TableData = { id: string | number };
+
+export type TableProps<T extends TableData> = ControlledTableProps & {
   data: T[];
   columns: ColumnProps<T>[];
   className?: string;
@@ -16,4 +18,10 @@ export interface TableProps<T extends { id: string | number }> {
   onLoadMore?: () => void;
   onRowSelect?: (row: T | null) => void;
   isRowSelectable?: (row: T) => boolean;
+};
+
+export interface ControlledTableProps {
+  selectedRow?: string | number | null;
+  defaultSelectedRow?: string | number | null;
+  onSelectedRowChange?: (rowId: string | number | null) => void;
 }
