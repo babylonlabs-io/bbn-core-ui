@@ -1,51 +1,11 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import { createThemes } from "tw-colors";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx,css}"],
   darkMode: ["class", '[data-mode="dark"]'],
   theme: {
-    colors: {
-      current: "currentColor",
-      transparent: "transparent",
-      primary: {
-        DEFAULT: "#000000DE",
-        main: "#042F40",
-        dark: "#12495E",
-        light: "#387085",
-        contrast: "#F5F7F2",
-      },
-      secondary: {
-        main: "#CE6533",
-        dark: "#69341A",
-        light: "#924724",
-        contrast: "#FFFFFF",
-      },
-      error: {
-        main: "#D32F2F",
-        dark: "#C62828",
-        light: "#EF5350",
-        contrast: "#FFFFFF",
-      },
-      warning: {
-        main: "#EF6C00",
-        dark: "#E65100",
-        light: "#FF9800",
-        contrast: "#FFFFFF",
-      },
-      info: {
-        main: "#0288D1",
-        dark: "#01579B",
-        light: "#03A9F4",
-        contrast: "#FFFFFF",
-      },
-      success: {
-        main: "#2E7D32",
-        dark: "#1B5E20",
-        light: "#4CAF50",
-        contrast: "#FFFFFF",
-      },
-    },
     fontFamily: {
       sans: ["Px Grotesk", ...defaultTheme.fontFamily.sans],
       mono: ["Px Grotesk Mono", ...defaultTheme.fontFamily.mono],
@@ -141,5 +101,96 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    createThemes({
+      light: {
+        current: "currentColor",
+        transparent: "transparent",
+        surface: "#ffffff",
+        accent: {
+          primary: "#12495E",
+          secondary: "#387085",
+          disabled: "#9ab7c2",
+          contrast: "#ffffff",
+        },
+        primary: {
+          main: "#042F40",
+          dark: "#12495E",
+          light: "#387085",
+          contrast: "#F5F7F2",
+        },
+        secondary: {
+          main: "#CE6533",
+          highlight: "#F9F9F9",
+          contrast: "#F5F7F2",
+          strokeLight: "#d7e1e7",
+          strokeDark: "#387085",
+        },
+        error: {
+          main: "#D32F2F",
+          dark: "#C62828",
+          light: "#EF5350",
+        },
+        warning: {
+          main: "#EF6C00",
+          dark: "#E65100",
+          light: "#FF9800",
+        },
+        info: {
+          main: "#3465CF",
+          dark: "#213F82",
+          light: "#34C7CF",
+        },
+        success: {
+          main: " #2E7D32",
+          dark: "#518665",
+          light: "#4CAF50",
+        },
+      },
+      dark: {
+        current: "currentColor",
+        transparent: "transparent",
+        surface: "#202020",
+        accent: {
+          primary: "#F0F0F0",
+          secondary: "#B0B0B0",
+          disabled: "#787878",
+          contrast: " #ffffff",
+        },
+        primary: {
+          main: "#111111",
+          dark: "#000000",
+          light: "#387085",
+          contrast: "#191919",
+        },
+        secondary: {
+          main: "#CE6533",
+          highlight: "#252525",
+          contrast: "#F5F7F2",
+          strokeLight: "#2F2F2F",
+          strokeDark: "#387085",
+        },
+        error: {
+          main: "#D32F2F",
+          dark: "#C62828",
+          light: "#EF5350",
+        },
+        warning: {
+          main: "#EF6C00",
+          dark: "#E65100",
+          light: "#FF9800",
+        },
+        info: {
+          main: "#3465CF",
+          dark: "#213F82",
+          light: "#34C7CF",
+        },
+        success: {
+          main: " #2E7D32",
+          dark: "#518665",
+          light: "#4CAF50",
+        },
+      },
+    }),
+  ],
 };

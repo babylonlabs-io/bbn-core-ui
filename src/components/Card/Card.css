@@ -1,3 +1,3 @@
 .bbn-card {
-  @apply rounded border border-primary-dark/20 bg-secondary-contrast p-6;
+  @apply bg-surface border-secondary-strokeLight rounded border p-6;
 }
