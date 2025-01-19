@@ -6,7 +6,7 @@
   }
 
   &-disabled {
-    @apply text-primary/12;
+    @apply text-accent-primary;
   }
 }
 

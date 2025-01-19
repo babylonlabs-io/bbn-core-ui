@@ -16,7 +16,7 @@ export const Default: Story = {
     args.variant ? (
       <Heading {...args}>Heading--{args.variant}</Heading>
     ) : (
-      <div>
+      <div className="text-accent-primary">
         <Heading {...args} variant="h1">
           Heading--H1
         </Heading>

@@ -13,6 +13,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    className: "text-secondary-main",
+    className: "text-accent-secondary",
   },
 };

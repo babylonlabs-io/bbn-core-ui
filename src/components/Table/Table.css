@@ -19,7 +19,7 @@
 
   /* Header row styles */
   &-header {
-    @apply sticky top-0 z-30 bg-secondary-contrast text-sm font-medium text-primary-light transition-shadow;
+    @apply sticky top-0 z-30 bg-secondary-contrast text-sm font-medium text-accent-secondary transition-shadow;
 
     tr {
       @apply relative;
@@ -150,7 +150,7 @@
 
     /* Individual sort icon styles */
     .bbn-sort-icon {
-      @apply text-primary/20 transition-colors;
+      @apply text-accent-primary transition-colors;
 
       &.bbn-sort-icon-up {
         @apply -mb-1;
@@ -161,11 +161,11 @@
       }
 
       &.bbn-sort-icon-active {
-        @apply !text-primary-light;
+        @apply !text-accent-secondary;
       }
 
       &.bbn-sort-icon-inactive {
-        @apply !text-primary/10;
+        @apply !text-accent-primary/10;
       }
     }
   }

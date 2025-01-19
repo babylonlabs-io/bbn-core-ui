@@ -18,7 +18,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     placement: "bottom-start",
-    children: <Text variant="body1">The content of the Popover</Text>,
+    children: (
+      <Text variant="body1" className="text-accent-primary">
+        The content of the Popover
+      </Text>
+    ),
   },
   render: (props) => {
     const [open, setOpen] = useState(props.open);

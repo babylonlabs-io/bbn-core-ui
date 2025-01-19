@@ -12,5 +12,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: { children: "Card" },
+  args: { children: <span className="text-accent-primary">Card</span> },
 };
